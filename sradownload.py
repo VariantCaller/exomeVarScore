@@ -1,15 +1,25 @@
+import csv
 import os
 
-text = 'SRR11304597'
-for text in text.split():
-    print("Default \033[92mLight green")
-    print("Default \033[44mBlue")
-    first = "_1.fastq"
-    second = "_2.fastq"
-    os.system(f"fasterq-dump {text} -p -e 12")
-    os.system(f"gzip {text}{first}")
-    os.system(f"gzip {text}{second}")
-    # os.system(f"parallel-fastq-dump --sra-id {text} --threads 16 --outdir /media/jake/Linux.HDD/Endo/ --split-files --gzip")
-print("Default \033[39mDefault")
-print("Default \033[49mDefault")
+# Create a folder called 'SRA' if it doesn't already exist
+if not os.path.exists('SRA'):
+    os.makedirs('SRA')
 
+# Open the CSV file containing the SRA ID numbers
+with open('SraAccList.csv', newline='') as csvfile:
+    # Create a CSV reader object
+    reader = csv.DictReader(csvfile)
+    # Loop through each row in the file
+    for row in reader:
+        # Extract the SRA ID from the "acc" column
+        sra_id = row['acc']
+        # Print some information about the current ID being processed
+        print(f"Processing SRA ID: {sra_id}")
+        # Download the FASTQ files for the current ID and save them in the 'SRA' folder
+        first = os.path.join('SRA', sra_id + "_1.fastq")
+        second = os.path.join('SRA', sra_id + "_2.fastq")
+        os.system(f"fasterq-dump {sra_id} -p -e 12 --outdir SRA")
+        os.system(f"gzip {first}")
+        os.system(f"gzip {second}")
+        # Print some information about the saved files
+        print(f"Files saved in SRA/{sra_id}")
