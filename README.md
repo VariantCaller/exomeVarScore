@@ -24,7 +24,7 @@ To download the FASTQ files, run the following command:
 
 `python sradownload.py`
 
-  * This script will create a folder named __SRA__ containing all the paired FASTQ.gz files. Depending on the number of SRA IDs and your machine, this script may take a long time, approximately 0.5 to 1 hour per ID.
+  * This script will create a folder named __SRA__ containing all the paired FASTQ.gz files. Depending on the number of SRA IDs and dedicated threads (in _config.txt_), this script may take a long time, approximately 0.5 to 1 hour per ID.
   
 ### Step 3: Convert FASTQ.gz Files to VCF
 
