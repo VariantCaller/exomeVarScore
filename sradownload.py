@@ -24,8 +24,9 @@ with open('SraAccList.csv', newline='') as csvfile:
         # Download the FASTQ files for the current ID and save them in the 'SRA' folder
         first = os.path.join('SRA', sra_id + "_1.fastq")
         second = os.path.join('SRA', sra_id + "_2.fastq")
-        os.system(f"fasterq-dump {sra_id} -p -e {threads} --outdir SRA")
+        os.system(f"fasterq-dump {sra_id} -t {threads} -p -e {threads} --outdir SRA")
         os.system(f"gzip {first}")
         os.system(f"gzip {second}")
         # Print some information about the saved files
         print(f"Files saved in SRA/{sra_id}")
+
