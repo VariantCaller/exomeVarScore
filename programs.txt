@@ -52,10 +52,11 @@ pandas - see above in matchtodiseases.py
 
 
 
-# Databases to download for vcf annotation
+# Databases to download for vcf annotation. Must create tabix index after download.
 
 dbSNP
 wget --timeout=5 -c https://ftp.ncbi.nih.gov/snp/organisms/human_9606_b151_GRCh37p13/VCF/All_20180423.vcf.gz
+tabix -p vcf All_20180423.vcf.gz
 
 dbNSFP
 wget --timeout=5 -c https://snpeff.blob.core.windows.net/databases/dbs/GRCh37/dbNSFP_4.1a/dbNSFP4.1a.txt.gz.tbi
@@ -64,3 +65,4 @@ wget --timeout=5 -c https://snpeff.blob.core.windows.net/databases/dbs/GRCh37/db
 
 ClinVar
 wget --timeout=5 -c https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/clinvar_20230318.vcf.gz
+tabix -p vcf clinvar_20230318.vcf.gz
