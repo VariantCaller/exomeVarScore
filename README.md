@@ -26,21 +26,28 @@ To download the FASTQ files, run the following command:
 
   * This script will create a folder named __SRA__ containing all the paired FASTQ.gz files. Depending on the number of SRA IDs and dedicated threads (see _config.txt_), this script may take a long time, approximately 0.5 to 1 hour per ID.
   
-### Step 3: Convert FASTQ.gz Files to VCF
+### Step 3: Convert FASTQ.gz to BAM files
 
 To convert the FASTQ.gz files to VCF format, run the following command:
 
-`python sratovcf.py`
-* This will create two folders named __BAM__ and __VCF__ with associated BAM and VCF files.
+`python fastqtobam.py`
+* This will create a folder named __BAM__ with associated BAM files.  
+
+### Step 4: Convert BAM files to VCF
+
+To convert the BAM files to VCF format, run the following command:
+
+`python bamtovcf.py`
+* This will create a folder named __VCF__ with associated BAM files.
   
-### Step 4: Annotate VCF Files
+### Step 5: Annotate VCF Files
 
 To annotate the VCF files with dbSNP, dbNSFP, and ClinVar, run the following command:
 
 `python annotate.py`
 * For directions on how to download these databases, see the _programs.txt_ file.
 
-### Step 5: Process the Annotated VCF Files
+### Step 6: Process the Annotated VCF Files
 
 Use the following commands in this order to process the annotated VCF files:
 
