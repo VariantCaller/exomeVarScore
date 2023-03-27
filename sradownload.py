@@ -5,6 +5,7 @@ import os
 with open('config.txt') as f:
     config = dict(line.strip().split('=') for line in f if '=' in line and not line.startswith('#'))
 
+samples = config['SAMPLE_NAMES']
 threads = config['THREADS']
 
 # Create a folder called 'SRA' if it doesn't already exist
@@ -12,7 +13,7 @@ if not os.path.exists('SRA'):
     os.makedirs('SRA')
 
 # Open the CSV file containing the SRA ID numbers
-with open('SraAccList.csv', newline='') as csvfile:
+with open(f'{samples}', newline='') as csvfile:
     # Create a CSV reader object
     reader = csv.DictReader(csvfile)
     # Loop through each row in the file
@@ -29,4 +30,3 @@ with open('SraAccList.csv', newline='') as csvfile:
         os.system(f"gzip {second}")
         # Print some information about the saved files
         print(f"Files saved in SRA/{sra_id}")
-
