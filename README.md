@@ -39,6 +39,7 @@ To convert the BAM files to VCF format, run the following command:
 
 `python bamtovcf.py`
 * This will create a folder named __VCF__ with associated BAM files.
+* The comman uses parallel processing using the number of cores set in _config.txt_.
   
 ### Step 5: Annotate VCF Files
 
