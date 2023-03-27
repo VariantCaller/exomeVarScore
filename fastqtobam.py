@@ -11,7 +11,6 @@ index_path = config['REF_INDEX']
 
 # Create output directories if they do not exist
 os.makedirs('BAM', exist_ok=True)
-os.makedirs('VCF', exist_ok=True)
 
 # Define a function to process each SRA ID
 def process_sra(sra_id):
