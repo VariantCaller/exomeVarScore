@@ -37,4 +37,3 @@ with open(f'{samples}', newline='') as csvfile:
         futures = [executor.submit(process_sra, row['acc']) for row in reader]
         for future in concurrent.futures.as_completed(futures):
             future.result()
-
