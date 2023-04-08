@@ -18,8 +18,8 @@
 # Settings for variant calling (sratovcf.py)
 
 	# Directory containing the reference genome and BWA index
-	REF_DIR=/home/jake/bwa/hg19.fa
-	REF_INDEX=/home/jake/bwa/hg19bwaidx
+	REF_DIR=/path/to/bwa/hg19.fa
+	REF_INDEX=/path/to/bwa/hg19bwaidx
 
 	# Minimum coverage required to call a variant (default=50)
 	MIN_COVERAGE=50
@@ -40,32 +40,29 @@
 	GENOME_ASSEMBLY=GRCh37.75
 	
 	# Path to snpEff file directory
-	SNPEFF_DIR=/home/jake/snpEff
+	SNPEFF_DIR=/path/to/snpEff
 	
 	# Path to SnpSift file directory
-	SNPSIFT_DIR=/home/jake/snpEff
+	SNPSIFT_DIR=/path/to/snpEff
 	
 	# When listing path, be sure to include file name/executable as shown below!!!
 	# Path to snpEff.config file
-	SNPEFF_CONFIG=/home/jake/snpEff/snpEff.config
-	
-	# Path to snpEff executable
-	SNPEFF_X=/home/jake/snpEff/snpEff.jar
+	SNPEFF_CONFIG=/path/to/snpEff/snpEff.config
 	
 	# Path to dbSNP
-	DBSNP_DB=/home/jake/github/DB/All_20180423.vcf.gz
+	DBSNP_DB=/path/to/github/DB/All_20180423.vcf.gz
 	
 	# Path to dbNSFP
-	DBNSFP_DB=/home/jake/github/DB/dbNSFP4.1a.txt.gz
+	DBNSFP_DB=/path/to/github/DB/dbNSFP4.1a.txt.gz
 	
 	# Path to ClinVar
-	CLINVAR_DB=/home/jake/github/DB/clinvar_20230318.vcf.gz
+	CLINVAR_DB=/path/to/github/DB/clinvar_20230318.vcf.gz
 
 
 
 # Filter settings
 
-	#Desired source for allele frequency values
+	#Desired dbNSFP source for allele frequency values
 	FREQ_SOURCE=dbNSFP_ExAC_AF
 	
 	#Desired cutoff allele frequency (ex. < 2%)
@@ -75,12 +72,12 @@
 # Disease database paths
 	
 	#Path to KEGG_DisGenet DB
-	KEGG_DisGenet=/home/jake/anaconda3/share/examples/DB/KEGG.DisGenet.csv
+	KEGG_DisGenet=/path/to/DB/KEGG.DisGenet.csv
 	
 	#Path to KEGG_HPO_DisGenet DB
-	KEGG_HPO_DisGenet=/home/jake/anaconda3/share/examples/DB/KEGG.HPO.DisGenet.csv
+	KEGG_HPO_DisGenet=/path/to/DB/KEGG.HPO.DisGenet.csv
 
-
-chmod +x /home/jake/snpEff/SnpSift.jar
+#If needed to add executable permission for SnpSift
+chmod +x /path/to/snpEff/SnpSift.jar
 
 
