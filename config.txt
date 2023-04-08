@@ -1,0 +1,86 @@
+# Configuration settings
+
+# Name of CSV file containing file nemes. (be sure that the csv is structured like our example 'SraAccList.csv' with a header named 'acc'
+
+	SAMPLE_NAMES=SraAccList.csv
+
+
+# Global settings
+
+	# Number of threads to use (default=1)
+	THREADS=8
+	MAX_CORES=8
+	
+	# Option to clear (True) or keep (False) 'dump' folders (useful if you are troubleshooting)
+	CLEAR_DUMP_FOLDER=True
+
+# SRA accession: https://www.ncbi.nlm.nih.gov/sra?LinkName=bioproject_sra_all&from_uid=316441
+# Settings for variant calling (sratovcf.py)
+
+	# Directory containing the reference genome and BWA index
+	REF_DIR=/home/jake/bwa/hg19.fa
+	REF_INDEX=/home/jake/bwa/hg19bwaidx
+
+	# Minimum coverage required to call a variant (default=50)
+	MIN_COVERAGE=50
+
+	# Maximum gap length (default=300)
+	GAP_LENGTH=300
+
+	# Minimum alternate allele count (default=60)
+	ALT_ALLELE_COUNT=60
+
+	# Minimum base quality score (default=30)
+	QUALITY_SCORE=30
+
+
+# Settings for vcf annotation (annotate.py)
+
+	# Specify the genome assembly and version used as a reference for the analysis (here we used the human reference genome assembly GRCh37.75)
+	GENOME_ASSEMBLY=GRCh37.75
+	
+	# Path to snpEff file directory
+	SNPEFF_DIR=/home/jake/snpEff
+	
+	# Path to SnpSift file directory
+	SNPSIFT_DIR=/home/jake/snpEff
+	
+	# When listing path, be sure to include file name/executable as shown below!!!
+	# Path to snpEff.config file
+	SNPEFF_CONFIG=/home/jake/snpEff/snpEff.config
+	
+	# Path to snpEff executable
+	SNPEFF_X=/home/jake/snpEff/snpEff.jar
+	
+	# Path to dbSNP
+	DBSNP_DB=/home/jake/github/DB/All_20180423.vcf.gz
+	
+	# Path to dbNSFP
+	DBNSFP_DB=/home/jake/github/DB/dbNSFP4.1a.txt.gz
+	
+	# Path to ClinVar
+	CLINVAR_DB=/home/jake/github/DB/clinvar_20230318.vcf.gz
+
+
+
+# Filter settings
+
+	#Desired source for allele frequency values
+	FREQ_SOURCE=dbNSFP_ExAC_AF
+	
+	#Desired cutoff allele frequency (ex. < 2%)
+	ALLELE_FREQ=0.02
+
+
+# Disease database paths
+	
+	#Path to KEGG_DisGenet DB
+	KEGG_DisGenet=/home/jake/anaconda3/share/examples/DB/KEGG.DisGenet.csv
+	
+	#Path to KEGG_HPO_DisGenet DB
+	KEGG_HPO_DisGenet=/home/jake/anaconda3/share/examples/DB/KEGG.HPO.DisGenet.csv
+
+
+chmod +x /home/jake/snpEff/SnpSift.jar
+
+
