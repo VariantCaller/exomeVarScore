@@ -33,4 +33,3 @@ with open('SraAccList.csv', newline='') as csvfile:
     # Process each SRA ID sequentially
     for row in reader:
         process_sra(row['acc'])
-
