@@ -3,7 +3,7 @@ ExomeVarScore is a powerful pipeline that processes whole exome sequencing (WES)
 
 ## Getting Started
 
-Note: Before beginning, be sure to check that you have downloaded the necessary programs and databases. This information, along with directions for download are provided in _programs.txt_
+Note: Before beginning, be sure to check that you have downloaded the necessary programs and databases. This information, along with directions for download are provided in _Programs&Databases.md_
   * Once you have the programs/databases downloaded and functioning, update the _config.txt_ file with appropriate paths.  
     * Also include desired settings for variant calling.
 
