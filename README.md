@@ -60,6 +60,11 @@ Use the following commands in this order to process the annotated VCF files:
 * This applies the scoring algorithm to each variant and creates a .txt file with each variant. It also creates an additional .txt file with summed SNP scores located on the same gene.  
 
 `python matchtodiseases.py`  
-* This matches each gene with an associated disease and organ system. For genes related to the same disease, gene scores are summed to result in a final disease score.
+* This matches each gene with an associated disease and organ system from the provided DiseaseDatabases files. For genes related to the same disease, gene scores are summed to result in a final disease score.
+* Disease and organ system vocabularies are derrived from KEGG Diseases<sup>1</sup>.
+* Two different database files are provided. One with diseases from DisGeNET V7.0<sup>2</sup> and another from both DisGeNET<sup>2</sup> and the Human Phenotype Ontology (HPO)<sup>3</sup>.
 
-
+<sub><sup>1. Kanehisa M, Furumichi M, Tanabe M, Sato Y, Morishima K. KEGG: new perspectives on genomes, pathways, diseases and drugs. Nucleic Acids Res. 2017 Jan 4;45(D1):D353-D361. doi: 10.1093/nar/gkw1092. Epub 2016 Nov 28. PMID: 27899662; PMCID: PMC5210567.</sup></sub></p>
+<sub><sup>2. Janet Piñero, Juan Manuel Ramírez-Anguita, Josep Saüch-Pitarch, Francesco Ronzano, Emilio Centeno, Ferran Sanz, Laura I Furlong.
+The DisGeNET knowledge platform for disease genomics: 2019 update. Nucl. Acids Res. (2019) doi:10.1093/nar/gkz1021</sup></sub></p>
+<sub><sup>3. Sebastian Köhler, Michael Gargano, Nicolas Matentzoglu, Leigh C Carmody, David Lewis-Smith, Nicole A Vasilevsky, Daniel Danis, Ganna Balagura, Gareth Baynam, Amy M Brower, Tiffany J Callahan, Christopher G Chute, Johanna L Est, Peter D Galer, Shiva Ganesan, Matthias Griese, Matthias Haimel, Julia Pazmandi, Marc Hanauer, Nomi L Harris, Michael J Hartnett, Maximilian Hastreiter, Fabian Hauck, Yongqun He, Tim Jeske, Hugh Kearney, Gerhard Kindle, Christoph Klein, Katrin Knoflach, Roland Krause, David Lagorce, Julie A McMurry, Jillian A Miller, Monica C Munoz-Torres, Rebecca L Peters, Christina K Rapp, Ana M Rath, Shahmir A Rind, Avi Z Rosenberg, Michael M Segal, Markus G Seidel, Damian Smedley, Tomer Talmy, Yarlalu Thomas, Samuel A Wiafe, Julie Xian, Zafer Yüksel, Ingo Helbig, Christopher J Mungall, Melissa A Haendel, Peter N Robinson, The Human Phenotype Ontology in 2021, Nucleic Acids Research, Volume 49, Issue D1, 8 January 2021, Pages D1207–D1217, https://doi.org/10.1093/nar/gkaa1043</sup></sub></p>
