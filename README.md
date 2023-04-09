@@ -61,7 +61,7 @@ Use the following commands in this order to process the annotated VCF files:
 
 `python matchtodiseases.py`  
 * This matches each gene with an associated disease and organ system from the provided DiseaseDatabases files. For genes related to the same disease, gene scores are summed to result in a final disease score.
-* Disease and organ system vocabularies are derrived from KEGG Diseases<sup>1</sup>.
+* Disease and organ system vocabularies are derived from KEGG Diseases<sup>1</sup>.
 * Two different database files are provided. One with diseases from DisGeNET V7.0<sup>2</sup> and another from both DisGeNET<sup>2</sup> and the Human Phenotype Ontology (HPO)<sup>3</sup>.
 
 <sub><sup>1. Kanehisa M, Furumichi M, Tanabe M, Sato Y, Morishima K. KEGG: new perspectives on genomes, pathways, diseases and drugs. Nucleic Acids Res. 2017 Jan 4;45(D1):D353-D361. doi: 10.1093/nar/gkw1092. Epub 2016 Nov 28. PMID: 27899662; PMCID: PMC5210567.</sup></sub></p>
